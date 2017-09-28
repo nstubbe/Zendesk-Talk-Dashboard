@@ -1,0 +1,28 @@
+.agentlist{
+    /* align-content: space-between; */
+}
+
+.agentlistitem{
+    width:100%;
+}
+
+.agentlistitem div{
+    display: inline-block;
+}
+
+.agentname{
+    width:50%;
+}
+
+.available{
+    color:green;
+}
+
+.oncall{
+    color:blue;
+}
+
+hr{
+    width:100%;
+}
+
