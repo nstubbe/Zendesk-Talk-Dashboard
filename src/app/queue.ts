@@ -1,4 +1,4 @@
-export class queue{
+export class Queue{
     calls_waiting:number;
     callbacks_waiting:number;
     average_wait_time:number;
