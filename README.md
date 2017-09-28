@@ -1,27 +1,7 @@
 # ZendeskDashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+This small angular application displays some statistics about the callcenter functionality in the Zendesk platform. Currently it displays the number of people in queue and the longest wait time of people in queue, alongside everyone who is not unavailable in a list.
 
-## Development server
+# Known issue
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+When someone makes a call from Zendesk to an outside number, the people in queue count goes up by 1 until the call is picked up. This is an issue in the data Zendesk is supplying. I contacted them, but although they recognized this as a bug, they have no immediate plans to fix the issue.
