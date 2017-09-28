@@ -1,6 +1,6 @@
 <div class="agentlist">
   <div class="agentlistitem" *ngFor="let agent of agents">
-    <div class="agentname">{{agent.name}}</div>
+    <div class="agentname">{{agent.name | truncate }}</div>
     <div>
       <span [ngClass]="{'oncall' : agent.status_code === 'on_call', 'available' : agent.status_code === 'available'}">
       <i class="fa fa-square" aria-hidden="true"></i></span>

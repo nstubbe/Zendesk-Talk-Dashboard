@@ -7,13 +7,15 @@ import {Agent} from '../agent';
 export class AgentsActivityService {
 
   //URL to your backend which returns json from Zendesk (to avoid CORS)
-  private AgentsUrl = 'http://localhost/AgentActivity.php'
+  private AgentsUrl = 'http://localhost:8000/AgentActivity.php'
 
   constructor(private http: Http) {}
 
   getAgentActivityList(): Observable<Agent[]>{
     return this. http.get(this.AgentsUrl)
     .map(res => res.json().agents_activity)
-    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+    .catch((error:any) =>
+    Observable.throw(error.json().error || 'Server error')
+  );
   }
 }

@@ -7,12 +7,14 @@ import { AgentActivityComponent } from './agent-activity/agent-activity.componen
 import { QueueActivityComponent } from './queue-activity/queue-activity.component';
 import { AgentsActivityService } from './services/agents-activity.service';
 import { QueueActivityService } from './services/queue-activity.service';
+import { TruncatePipe } from './pipes/truncate'
 
 @NgModule({
   declarations: [
     AppComponent,
     AgentActivityComponent,
-    QueueActivityComponent
+    QueueActivityComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body{
     font-family: 'Roboto', sans-serif;
-    font-size:64px;
-    width:1600px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 64px;
+    margin-left: 20px;
+    margin-right: 20px;
 }

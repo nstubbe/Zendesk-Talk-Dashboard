@@ -1,0 +1,14 @@
+.queueActivity{
+  width:100%;
+  font-size:1.7em;
+  margin: 50px 0 20px 0
+}
+
+.waittime{
+  width:50%;
+  display:inline-block;
+}
+
+.callswaiting{
+  display:inline-block;
+}
