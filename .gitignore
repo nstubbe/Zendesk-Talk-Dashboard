@@ -41,3 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 php/
+src/app/queue-activity/queue-activity.component.spec.ts
+.vscode/launch.json
+src/app/agent-activity/agent-activity.component.spec.ts
