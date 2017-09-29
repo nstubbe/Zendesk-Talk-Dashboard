@@ -30,11 +30,15 @@
 }
 
 .error{
-    margin-top:10px;
     text-align: center;
+    margin-top:10px;
     background-color:red;
     color:white;
     font-size: 4em;
-    height:80vh;
     width: 100%;
+}
+
+.error p{
+    margin:0;
+    padding:0;
 }

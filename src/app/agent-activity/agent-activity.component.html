@@ -2,8 +2,8 @@
   <div class="agentlistitem" *ngFor="let agent of agents" [ngClass]="{'oncall' : agent.status_code === 'on_call', 'available' : agent.status_code === 'available'}">
     <div class="agentname">{{agent.name | truncate }}</div>
     <div class="agentstatus">{{agent.status}}</div>
-  </div> 
-  <div *ngIf="agents?.length===0" class="error">
+  </div>  
+  <div class="error" *ngIf="agents?.length===0">
     <p>OFFLINE</p>
   </div>
 

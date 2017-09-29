@@ -1,8 +1,10 @@
 <div class="queueActivity">
   <div class="callswaiting">
-    Callers: {{queue.calls_waiting}}
+      <p>CALLS</p>
+    {{queue.calls_waiting}}
   </div>
   <div class="waittime">
-    Time: {{queue.longest_wait_time | timeformat}}
+    <p>TIME</p>
+    {{queue.longest_wait_time | timeformat}}
   </div>
 </div>
