@@ -1,28 +1,40 @@
 .agentlist{
-    /* align-content: space-between; */
+    display:flex;
+    flex-flow: wrap;
 }
 
 .agentlistitem{
-    width:100%;
+    font-size: 1.5em;
+    flex: 0 0 28%;
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
 }
 
-.agentlistitem div{
-    display: inline-block;
-}
-
-.agentname{
-    width:50%;
+.agentstatus{
+    font-size:0.5em;
 }
 
 .available{
-    color:green;
+    color:white;
+    background-color: green;
 }
 
 .oncall{
-    color:blue;
+    color:white;
+    background-color: blue;
 }
 
-hr{
-    width:100%;
+.error{
+    margin-top:10px;
+    text-align: center;
+    background-color:red;
+    color:white;
+    font-size: 4em;
+    height:80vh;
+    width: 100%;
 }
-

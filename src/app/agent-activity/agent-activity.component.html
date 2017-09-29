@@ -1,11 +1,10 @@
 <div class="agentlist">
-  <div class="agentlistitem" *ngFor="let agent of agents">
+  <div class="agentlistitem" *ngFor="let agent of agents" [ngClass]="{'oncall' : agent.status_code === 'on_call', 'available' : agent.status_code === 'available'}">
     <div class="agentname">{{agent.name | truncate }}</div>
-    <div>
-      <span [ngClass]="{'oncall' : agent.status_code === 'on_call', 'available' : agent.status_code === 'available'}">
-      <i class="fa fa-square" aria-hidden="true"></i></span>
-      {{agent.status}}
-    </div>
-    <hr>
+    <div class="agentstatus">{{agent.status}}</div>
+  </div> 
+  <div *ngIf="agents?.length===0" class="error">
+    <p>OFFLINE</p>
   </div>
+
 </div>

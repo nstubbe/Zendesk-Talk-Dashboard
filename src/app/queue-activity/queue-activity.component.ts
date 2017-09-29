@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QueueActivityService } from '../services/queue-activity.service';
 import { Observable } from 'rxjs/Rx';
 import { Queue } from '../queue';
+import { TimeFormatPipe } from '../pipes/timeformat'
 
 @Component({
   selector: 'app-queue-activity',

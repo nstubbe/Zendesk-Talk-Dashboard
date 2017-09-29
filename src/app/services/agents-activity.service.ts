@@ -7,7 +7,7 @@ import {Agent} from '../agent';
 export class AgentsActivityService {
 
   //URL to your backend which returns json from Zendesk (to avoid CORS)
-  private AgentsUrl = 'http://localhost:8000/AgentActivity.php'
+  private AgentsUrl = 'http://localhost/AgentActivity.php'
 
   constructor(private http: Http) {}
 

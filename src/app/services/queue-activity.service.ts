@@ -7,7 +7,7 @@ import {Queue} from '../queue';
 export class QueueActivityService {
 
     //URL to your backend which returns json from Zendesk (to avoid CORS)
-    private queueUrl = 'http://localhost:8000/QueueActivity.php'
+    private queueUrl = 'http://localhost/QueueActivity.php'
 
       constructor(private http: Http) {}
 

@@ -12,7 +12,7 @@ import { TruncatePipe } from '../pipes/truncate'
 })
 export class AgentActivityComponent implements OnInit {
 
-  seconds: number = 60;
+  seconds: number = 10;
 
   agents: Agent[] = [];
 
@@ -30,8 +30,7 @@ export class AgentActivityComponent implements OnInit {
   loadAgentActivity() {
     this.agentsActivityService.getAgentActivityList()
       .subscribe((data) => {
-        this.agents = data
-        // data.filter(x => x.status_code !== 'not_available');
+        this.agents = data.filter(x => x.status_code !== 'not_available'); 
       });
   }
 }

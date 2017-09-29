@@ -7,14 +7,16 @@ import { AgentActivityComponent } from './agent-activity/agent-activity.componen
 import { QueueActivityComponent } from './queue-activity/queue-activity.component';
 import { AgentsActivityService } from './services/agents-activity.service';
 import { QueueActivityService } from './services/queue-activity.service';
-import { TruncatePipe } from './pipes/truncate'
+import { TruncatePipe } from './pipes/truncate';
+import { TimeFormatPipe } from './pipes/timeformat';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgentActivityComponent,
     QueueActivityComponent,
-    TruncatePipe
+    TruncatePipe,
+    TimeFormatPipe
   ],
   imports: [
     BrowserModule,
