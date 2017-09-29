@@ -12,6 +12,7 @@ import { TimeFormatPipe } from '../pipes/timeformat'
 })
 export class QueueActivityComponent implements OnInit {
 
+
   seconds: number = 5;
   queue: Queue;
 
@@ -20,10 +21,9 @@ export class QueueActivityComponent implements OnInit {
   ngOnInit() {
     //initial load
     this.loadQueueActivity();
-
     //Request new data every x seconds
     Observable.interval(1000 * this.seconds).subscribe(
-      x => {this.loadQueueActivity()});
+      x => this.loadQueueActivity());
   }
 
   loadQueueActivity() {
@@ -32,5 +32,4 @@ export class QueueActivityComponent implements OnInit {
         this.queue = data
       });
   }
-
 }

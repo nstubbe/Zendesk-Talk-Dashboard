@@ -20,3 +20,23 @@ p{
   margin:0;
   font-size:0.5em;
 }
+
+.overtime{
+  color:white;
+  background-color:red;
+  -webkit-animation: animOvertime 1s infinite;  /* Safari 4+ */
+  -moz-animation: animOvertime 1s infinite;  /* Fx 5+ */
+  -o-animation: animOvertime 1s infinite;  /* Opera 12+ */
+  animation: animOvertime 1s infinite;  /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes animOvertime {
+  0%, 49% {
+    background-color: white;
+    color: black;
+  }
+  50%, 100% {
+    background-color: red;
+    color:white;
+  }
+}

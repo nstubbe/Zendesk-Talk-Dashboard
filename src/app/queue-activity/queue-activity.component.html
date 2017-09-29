@@ -1,7 +1,7 @@
-<div class="queueActivity">
+<div class="queueActivity" [ngClass]="{'overtime' : queue.longest_wait_time > 150}">
   <div class="callswaiting">
-      <p>CALLS</p>
-    {{queue.calls_waiting}}
+    <p>CALLS</p>
+      {{queue.calls_waiting}}
   </div>
   <div class="waittime">
     <p>TIME</p>

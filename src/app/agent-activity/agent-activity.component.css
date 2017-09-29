@@ -4,7 +4,7 @@
 }
 
 .agentlistitem{
-    font-size: 1.5em;
+    font-size: 1.2em;
     flex: 0 0 28%;
     padding: 1%;
     margin: 1%;
@@ -16,7 +16,7 @@
 }
 
 .agentstatus{
-    font-size:0.5em;
+    font-size:0.4em;
 }
 
 .available{
