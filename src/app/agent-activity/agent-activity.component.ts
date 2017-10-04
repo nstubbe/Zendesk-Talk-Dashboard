@@ -12,11 +12,16 @@ import { TruncatePipe } from '../pipes/truncate'
 })
 export class AgentActivityComponent implements OnInit {
 
+  sound: Howl;
   seconds: number = 10;
 
   agents: Agent[] = [];
 
-  constructor(private agentsActivityService: AgentsActivityService, private truncatePipe: TruncatePipe) { }
+  constructor(private agentsActivityService: AgentsActivityService, private truncatePipe: TruncatePipe) { 
+    this.sound = new Howl({
+      src: ['../../assets/sounds/overtime.mp3']
+    });
+  }
 
   ngOnInit() {
     //Initial load
@@ -25,12 +30,21 @@ export class AgentActivityComponent implements OnInit {
     //Request new data every x seconds
     Observable.interval(1000 * this.seconds).subscribe(
       x => { this.loadAgentActivity() });
+
+    Observable.interval(1000 * 10).subscribe(
+      x => this.playWarning()
+    );
   }
 
   loadAgentActivity() {
     this.agentsActivityService.getAgentActivityList()
       .subscribe((data) => {
-        this.agents = data.filter(x => x.status_code !== 'not_available'); 
+        this.agents = data.filter(x => x.status_code !== 'not_available');
       });
+  }
+
+  playWarning() {
+    if (this.agents.length < 1)
+      this.sound.play();
   }
 }
